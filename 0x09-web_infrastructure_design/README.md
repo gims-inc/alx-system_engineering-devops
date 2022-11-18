@@ -6,3 +6,5 @@
  [load balance](https://www.thegeekstuff.com/2016/01/load-balancer-intro/)
 
  [algorithms](https://community.f5.com/t5/technical-articles/intro-to-load-balancing-for-developers-ndash-the-algorithms/ta-p/273759)
+ 
+ [Application] (https://www.serverwatch.com/guides/application-server/)
