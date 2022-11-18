@@ -7,4 +7,4 @@
 
  [algorithms](https://community.f5.com/t5/technical-articles/intro-to-load-balancing-for-developers-ndash-the-algorithms/ta-p/273759)
  
- [Application] (https://www.serverwatch.com/guides/application-server/)
+ [Application](https://www.serverwatch.com/guides/application-server/)
