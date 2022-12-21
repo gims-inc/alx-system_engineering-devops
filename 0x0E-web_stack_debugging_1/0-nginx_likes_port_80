@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Nginx must be run, and listen on port 80 of all the server’s active IPv4 IPs 
+
+kill $(ps aux | pgrep 'nginx')
+
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+sed -e 's/\<ipv6only=on\>//g' /etc/nginx/sites-enabled/default
+
+service nginx start
