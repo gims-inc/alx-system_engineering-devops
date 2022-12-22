@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 # run apache on holbertonschool/265-0 container
 
-echo "ServerName localhost" >> /etc/apache2.conf
+echo 'Hello Holberton' > /var/www/html/index.html
+echo 'ServerName 127.0.0.1' >> /etc/apache2/apache2.conf
+sed -i 's/80/8080/g' /etc/apache2/ports.conf
+
 service apache2 start
