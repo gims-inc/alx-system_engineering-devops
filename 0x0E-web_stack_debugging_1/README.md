@@ -8,24 +8,22 @@
  ```
  netstat -pan | grep "80"
  ```
-## Delete /etc/nginx/sites-enabled/default
+### Delete /etc/nginx/sites-enabled/default
  
-## Create a symlink btn sites-enabled/default and sites-available default
-
-## change 8080 to 80
+### Create a symlink btn sites-enabled/default and sites-available default
   
 ### Remove the part:
 
  ```ipv6only=on```
 
-## Verify your config file
+### Verify your config file
 
  ```
  sudo nginx -t
 
  ```
 
-## Restart nginx
+### Restart nginx
 
  ```
   service nginx restart
