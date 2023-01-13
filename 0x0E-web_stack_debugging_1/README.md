@@ -4,7 +4,6 @@
  ```
  pgrep -lf nginx
  ```
-## 
  ```
  netstat -pan | grep "80"
  ```
