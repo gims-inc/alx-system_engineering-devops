@@ -31,6 +31,5 @@ if __name__ == "__main__":
                 todos.append(todo["title"])
 
     print(f'Employee {username} is done with tasks({completed}/{total}:')
-    
     for task in todos:
         print(f'\t {task}')
