@@ -1,18 +1,18 @@
 #!/usr/bin/python3
 
-"""Using this:
+"""Using this.
 
 REST API(https://jsonplaceholder.typicode.com/),
 for a given employee ID,
 returns information about his/her TODO list progress.
 """
 
-import sys
 import requests
+import sys
 
 
 def get_todos(emp_id:int):
-    """Fetches data from a given API endpoint.
+    """Fetches TODO data for an employee from a given API endpoint.
 
     Keyword arguments:
     emp_id -- employee id parameter (integer)
