@@ -11,21 +11,19 @@ import requests
 import sys
 
 
-def get_todos(emp_id:int):
+def get_todos(emp_id: int):
     """Fetches TODO data for an employee from a given API endpoint.
 
     Keyword arguments:
     emp_id -- employee id parameter (integer)
     """
-    url1 = f'https://jsonplaceholder.typicode.com/users/{emp_id}'
-    #Users URL
+    url1 = "https://jsonplaceholder.typicode.com/users/{}".format(emp_id)
     userRequest = requests.get(url1)
     userdata = userRequest.json()
     username = userdata["name"]
     userId = userdata["id"]
 
     url = "https://jsonplaceholder.typicode.com/todos/"
-    #todos URL
     todosRequest = requests.get(url)
     todosData = todosRequest.json()
     todos = []
@@ -39,11 +37,12 @@ def get_todos(emp_id:int):
                 completed += 1
                 todos.append(todo["title"])
 
-    print(f'Employee {username} is done with tasks({completed}/{total}:')
+    print("Employee {} is done with tasks({}/{}:"
+          .format(username, completed, total))
     for task in todos:
-        print(f'\t {task}')
+        print("\t {}".format(task))
 
 
 if __name__ == "__main__":
-
-    get_todos(sys.argv[1])
+    if len(sys.argv) > 1:
+        get_todos(sys.argv[1])
