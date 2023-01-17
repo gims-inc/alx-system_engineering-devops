@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-"""Using this
+"""Using this:
+
 REST API(https://jsonplaceholder.typicode.com/),
 for a given employee ID,
 returns information about his/her TODO list progress.
@@ -10,15 +11,21 @@ import sys
 import requests
 
 
-def get_todos(id):
-    """Fetches data from a given API endpoint"""
-    url1 = f'https://jsonplaceholder.typicode.com/users/{id}'
+def get_todos(emp_id:int):
+    """Fetches data from a given API endpoint.
+
+    Keyword arguments:
+    emp_id -- employee id parameter (integer)
+    """
+    url1 = f'https://jsonplaceholder.typicode.com/users/{emp_id}'
+    #Users URL
     userRequest = requests.get(url1)
     userdata = userRequest.json()
     username = userdata["name"]
     userId = userdata["id"]
 
     url = "https://jsonplaceholder.typicode.com/todos/"
+    #todos URL
     todosRequest = requests.get(url)
     todosData = todosRequest.json()
     todos = []
