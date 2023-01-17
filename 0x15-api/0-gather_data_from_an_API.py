@@ -37,7 +37,7 @@ def get_todos(emp_id: int):
                 completed += 1
                 todos.append(todo["title"])
 
-    print("Employee {} is done with tasks({}/{}:"
+    print("Employee {} is done with tasks({}/{}):"
           .format(username, completed, total))
     for task in todos:
         print("\t {}".format(task))
